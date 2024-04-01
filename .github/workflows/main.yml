@@ -12,13 +12,14 @@ jobs:
     steps: 
       - name: step1
         run: |
-          echo "hello from $name"
+          echo "hello from $name . $name created this file"
         env:
           name: Gagandeep
       - name: step2 for testing
         run: |
           cat /etc/os-release
           hostname
+          echo "hello from $name"
           touch /tmp/gagandeep1
           
 ## Name is not important in a step
