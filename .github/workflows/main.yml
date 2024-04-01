@@ -4,7 +4,10 @@ name: workflow1
 on: 
   workflow_dispatch:
   push:
-  
+env:
+   greetings: "Good Morning"
+   name: "Mark"
+   lastname: "J"
 
 jobs:
   job1:
