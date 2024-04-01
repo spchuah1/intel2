@@ -27,4 +27,20 @@ jobs:
 ## Name is not important in a step
       - run: uname -a
       
+  job2:
+    runs-on: ubuntu-latest
+    env:
+      lastname: "singh"
+    steps: 
+     - name: step1
+       run: |
+          echo "$greetings ! from $name $lastname. $name created this file"
+       env:
+          name: Gagandeep
+     - name: step2 for testing
+       run: |
+          cat /etc/os-release
+          hostname
+          echo "$greetings ! from $name"
+          touch /tmp/gagandeep1
         
