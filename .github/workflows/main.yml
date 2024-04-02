@@ -7,7 +7,7 @@ on:
 env:
    greetings: "Good Morning"
    name: "Mark"
-   lastname: "J"
+   lastname: "Jack"
 
 jobs:
   job1:
