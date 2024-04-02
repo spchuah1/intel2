@@ -12,7 +12,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    continue-on-error: true
+   
     environment: dev
     env:
       greetings: "hello"
@@ -21,7 +21,7 @@ jobs:
         run: |
           echo "$greetings ! from $name . $name created this file under repo ${{ GITHUB.REPOSITORY }} and its running on OS ${{ RUNNER.OS }}"
           echo Application name is ${{ vars.APP_NAME }} and password for the same is ${{ secrets.SERVER_PASSWORD }}
-          ech " ${{ vars.APP_NAME }} is hosted on ${{ vars.SERVER_NAME }} "
+          echo " ${{ vars.APP_NAME }} is hosted on ${{ vars.SERVER_NAME }} "
           sleep 5
         env:
           name: Gagandeep
@@ -39,6 +39,7 @@ jobs:
       
   deploy:
     runs-on: ubuntu-latest
+    needs: build
     environment: prod
     env:
       lastname: "singh"
