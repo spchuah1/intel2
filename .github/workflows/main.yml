@@ -39,7 +39,6 @@ jobs:
       
   deploy:
     runs-on: ubuntu-latest
-    needs: build
     environment: prod
     env:
       lastname: "singh"
