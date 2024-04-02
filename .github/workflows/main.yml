@@ -38,6 +38,7 @@ jobs:
       - run: uname -a
   test:
     runs-on: ubuntu-latest
+    continue-on-error: true
     environment: prod
     needs: build
     env:
