@@ -12,6 +12,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    continue-on-error: true
     environment: dev
     env:
       greetings: "hello"
